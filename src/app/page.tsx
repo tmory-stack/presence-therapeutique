@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -336,13 +337,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
             <div>
-              <div className="aspect-[4/5] bg-warm rounded-3xl border border-border flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-sage/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-sage-dark font-serif text-3xl">E</span>
-                  </div>
-                  <p className="text-text-muted text-sm">Photo Eugénie Vitse</p>
-                </div>
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
+                <Image
+                  src="/eugenie.jpg"
+                  alt="Eugénie Vitse - Ostéopathe D.O. et formatrice en Présence Thérapeutique Intégrative"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
             <div>

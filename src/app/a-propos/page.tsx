@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "À propos - Eugénie Vitse, Ostéopathe et Formatrice",
@@ -35,13 +36,15 @@ export default function APropos() {
                 </Link>
               </div>
             </div>
-            <div className="aspect-[4/5] bg-warm rounded-3xl border border-border flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 bg-sage/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-sage-dark font-serif text-5xl">E</span>
-                </div>
-                <p className="text-text-muted text-sm">Photo Eugénie Vitse</p>
-              </div>
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden relative">
+              <Image
+                src="/eugenie.jpg"
+                alt="Eugénie Vitse - Ostéopathe D.O. et formatrice en Présence Thérapeutique Intégrative"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
         </div>
